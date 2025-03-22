@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toorpu Venkat Reddy Central</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .map-link {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toorpu Venkat Reddy Central</h1>
+        <p>Apartment Building</p>
+    </header>
+    
+    <div id="map"></div>
+    
+    <div class="contact-info">
+        <p>📍 <a href="https://maps.app.goo.gl/CZM7fvJBaBfLu29u6" target="_blank">View on Google Maps</a></p>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+    </div>
+
+    <script>
+        function initMap() {
+            var location = { lat: 17.4987, lng: 78.3958 }; // Replace with exact coordinates if available
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</body>
+</html>
